@@ -1,0 +1,17 @@
+//REPLACE
+//card-body içindeki h5 i değiştireceğiz    <h5 class="card-title" id = "tasks-title">Todolar</h5>
+
+const cardbody = document.querySelectorAll(".card-body")[1]
+
+const newElement = document.createElement("h3")
+newElement.className = "card-title"
+newElement.id = "tasks-title"
+newElement.textContent = "Yeni Todolar"
+
+//Eski Element i değiştirme
+const oldElement = document.querySelector("#tasks-title")
+
+cardbody.replaceChild(newElement, oldElement)
+
+
+console.log(cardbody)
